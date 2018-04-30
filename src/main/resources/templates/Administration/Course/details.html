@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Course Details</title>
+    </head>
+    <body>
+        <h1>Details</h1>
+        <p th:text="'ID: ' + ${course.courseID}"/>
+        <p th:text="'Title: ' + ${course.title}"/>
+        <p th:text="'ETCS: ' + ${course.ETCS}"/>
+        <p th:text="'Start Date: ' + ${course.startDate}"/>
+
+        <h2 th:text="'Course named ' + ${course.title} + ' has start date ' + ${course.startDate}"></h2>
+        <p>The content here will come later</p>
+    </body>
+</html>

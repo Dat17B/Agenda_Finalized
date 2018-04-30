@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Create Course</title>
+        <link rel="stylesheet" href="/webjars/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+    <form method="POST" th:action="@{/Administration/courses/create}">
+        <input type="hidden" th:field="${course.courseID}" value="0" />
+        <label>Title</label><br />
+        <input type="text" th:field="${course.title}" /><br />
+
+        <label>ETCS</label><br />
+        <input type="text" th:field="${course.ETCS}" /><br />
+
+        <label>Start Date</label><br />
+        <input type="date" th:field="${course.startDate}" /><br />
+
+        <input type="submit" value="Send" class="btn-primary"/>
+    </form>
+    </body>
+</html>

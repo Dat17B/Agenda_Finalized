@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Delete Student</title>
+        <link rel="stylesheet" href="/webjars/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h2>Do you really want to delete this Student</h2>
+        <form method="POST" th:action="@{/Administration/students/delete}">
+            <p th:text="${student.fName + ' ' + student.lName}"></p>
+            <input type="hidden" th:field="${student.studID}" /><br />
+            <input type="submit" value="Delete" class="btn-primary" />
+            <a href="index.html" type="button">Cancel</a>
+        </form>
+    </body>
+</html>

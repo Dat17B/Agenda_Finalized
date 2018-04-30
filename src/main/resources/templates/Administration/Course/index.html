@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Administration Courses List</title>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Start Date</th>
+            <th>ETCS</th>
+            <th>--Options--</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="course: ${courses}">
+            <td th:text="${course.courseID}"/>
+            <td th:text="${course.title}"/>
+            <td th:text="${course.startDate}"/>
+            <td th:text="${course.ETCS}"/>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

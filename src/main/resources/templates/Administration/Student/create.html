@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Create new Student</title>
+        <link rel="stylesheet" href="/webjars/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <form method="POST" th:action="@{/Administration/students/create}">
+            <input type="hidden" th:field="${studentModel.studID}" value="0" />
+            <label>Firstname</label><br />
+            <input type="text" th:field="${studentModel.fName}" /><br />
+
+            <label>LastName</label><br />
+            <input type="text" th:field="${studentModel.lName}" /><br />
+
+            <label>CPR Number</label><br />
+            <input type="text" th:field="${studentModel.cpr}" /><br />
+
+            <label>Enrollment Date</label><br />
+            <input type="date" th:field="${studentModel.enrollmentDate}" /><br />
+
+            <input type="submit" value="Send" class="btn-primary" />
+        </form>
+    </body>
+</html>

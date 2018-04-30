@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Details</title>
+    </head>
+    <body>
+        <h1>Details</h1>
+        <p th:text="'ID: ' + ${student.studID}"/>
+        <p th:text="'First Name: ' + ${student.fName}"/>
+        <p th:text="'LastName: ' + ${student.lName}"/>
+        <p th:text="'Enrollment Date: ' + ${student.enrollmentDate}"/>
+        <p th:text="'CPR: ' + ${student.cpr}"/>
+
+        <h2 th:text="'Enrollments for ' + ${student.fName} + ' ' + ${student.lName}"></h2>
+        <p>The content here will come later</p>
+    </body>
+</html>
